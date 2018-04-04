@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-title>
+    <img src="assets/imgs/logodreel.png">
+  </ion-title>
+
+  <ion-list padding>
+    <button (click)="clickreport()" ion-button full clear round>Посмотреть отчёты</button>
+    <button (click)="clickemployee()" ion-button full clear round>Посмотреть сотрудников</button>
+    <button (click)="clickinvite()" ion-button full clear round>Пригласить пользователя</button>
+  </ion-list>
+
+  <ion-label>
+    <button ion-button full round (click)="onExit()">
+      <ion-icon name="log-out"></ion-icon>
+      Выход
+    </button>
+  </ion-label>
+
+</ion-content>
