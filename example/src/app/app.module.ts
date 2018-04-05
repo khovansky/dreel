@@ -35,6 +35,7 @@ import {User} from "../providers/user/user";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
