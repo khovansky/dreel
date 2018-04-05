@@ -8,14 +8,14 @@ export class Items {
 
   constructor(public api: Api) { }
 
-  query(params?: any) {
-    return this.api.get('/items', params);
-  }
-
-  add(item: Item) {
-  }
-
-  delete(item: Item) {
-  }
+  // query(params?: any) {
+  //   return this.api.get('/items', params);
+  // }
+  //
+  // add(item: Item) {
+  // }
+  //
+  // delete(item: Item) {
+  // }
 
 }

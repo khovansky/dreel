@@ -17,6 +17,8 @@ import {Tab3Page} from "../pages/tab3/tab3";
 import {Tab4Page} from "../pages/tab4/tab4";
 import {Tab2DetailPage} from "../pages/tab2-detail/tab2-detail";
 import {WelcomePage} from "../pages/welcome/welcome";
+
+
 import {Projects} from "../providers/projects/projects";
 import {Api} from "../providers/api/api";
 import {User} from "../providers/user/user";
@@ -36,6 +38,7 @@ import {User} from "../providers/user/user";
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpClient,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

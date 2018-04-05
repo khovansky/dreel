@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Config, Nav, Platform } from 'ionic-angular';
 
 import {FirstRunPage} from "../pages/pages";
-import { Settings } from '../providers/providers';
+// import { Settings } from '../providers/providers';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -43,7 +43,7 @@ export class MyApp {
     { title: 'Timer', component: 'TimerPage' }
   ]
 
-  constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(platform: Platform, /*settings: Settings, */ private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

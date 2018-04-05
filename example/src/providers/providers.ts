@@ -5,7 +5,7 @@ import {Projects} from "./projects/projects";
 
 export {
     Api,
-    Settings,
+    /*Settings,*/
     User,
     Projects
 };
