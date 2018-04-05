@@ -10,7 +10,7 @@ export class User {
 
   constructor(public api: Api) { }
 
-  login(accountInfo: any) {
+  /*login(accountInfo: any) {
     let seq = this.api.post('http://desktop.dreel.ru/user/login', accountInfo);
 
 // seq.subscribe((res: any) => {
@@ -41,17 +41,15 @@ export class User {
     return seq;
   }
 
-  /**
-   * Log the user out, which forgets the session
-   */
+
   logout() {
     this._user = null;
   }
 
-  /**
+  /!**
    * Process a login/signup response to store user data
-   */
+   *!/
   _loggedIn(resp) {
     this._user = resp.user;
-  }
+  }*/
 }
