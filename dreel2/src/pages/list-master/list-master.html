@@ -3,11 +3,11 @@
   <ion-navbar>
     <ion-title>Projects</ion-title>
 
-    <ion-buttons end>
+    <!--<ion-buttons end>
       <button ion-button icon-only (click)="addItem()">
         <ion-icon name="add"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-navbar>
 
 </ion-header>
@@ -16,16 +16,20 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
+      <ion-item>
         <h2>{{item.name}}</h2>
         <p>{{item.tasks}}</p>
-      </button>
+      </ion-item>
 
-      <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
-          удалить
-        </button>
-      </ion-item-options>
+      <!--<button ion-item (click)="openItem(item)">-->
+        <!---->
+      <!--</button>-->
+
+      <!--<ion-item-options>-->
+        <!--<button ion-button color="danger" (click)="deleteItem(item)">-->
+          <!--удалить-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
     </ion-item-sliding>
   </ion-list>
 </ion-content>
