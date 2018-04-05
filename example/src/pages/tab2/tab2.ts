@@ -19,10 +19,13 @@ import { Project } from '../../models/project';
 })
 export class Tab2Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, , public projects: Projects, public modalCtrl: ModalController) {
+  currentItems : Project[]=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public projects: Projects, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
+
 
     this.projects.getItems().subscribe((resp: any) => {
       console.log(resp);

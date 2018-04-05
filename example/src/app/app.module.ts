@@ -10,12 +10,17 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 
 
+
 import {Tab1Page} from "../pages/tab1/tab1";
 import {Tab2Page} from "../pages/tab2/tab2";
 import {Tab3Page} from "../pages/tab3/tab3";
 import {Tab4Page} from "../pages/tab4/tab4";
 import {Tab2DetailPage} from "../pages/tab2-detail/tab2-detail";
 import {WelcomePage} from "../pages/welcome/welcome";
+import {Projects} from "../providers/projects/projects";
+import {Api} from "../providers/api/api";
+import {User} from "../providers/user/user";
+
 
 @NgModule({
   declarations: [
@@ -46,6 +51,9 @@ import {WelcomePage} from "../pages/welcome/welcome";
   providers: [
     StatusBar,
     SplashScreen,
+    Api,
+    User,
+    Projects,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
