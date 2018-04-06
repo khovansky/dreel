@@ -9,25 +9,22 @@
 
 
 <ion-content padding>
-  <ion-card>
-
-    <ion-item>
+  <ion-item>
+    <ion-card>
+      <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/red.png">
       </ion-avatar>
       <h1>{{item.name}}</h1>
     </ion-item>
-
-    <ion-card-content>
+      <ion-card-content>
       <p> Активные задачи: {{item.tasks}}</p>
       <p> Сотрудники: {{item.team}} </p>
       <p> Потраченные часы: {{item.time}}</p>
-    </ion-card-content>
-
-    <button ion-button full (click)="openPage()">
+      </ion-card-content>
+      <button ion-button full (click)="openPage()">
       подробнее
-    </button>
-
-  </ion-card>
-
+      </button>
+    </ion-card>
+  </ion-item>
 </ion-content>
