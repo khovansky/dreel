@@ -2,12 +2,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>employees</ion-title>
+    <ion-title>Сотрудники</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-sliding >
+      <button ion-item *ngFor="let user of currentItems">
+        <img item-start src="assets/imgs/pop.png">
+        <h3>{{user.name}}</h3>
+        <p> Не в сети | 0 ч. 00 мин.</p>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>

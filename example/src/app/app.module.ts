@@ -22,6 +22,8 @@ import {WelcomePage} from "../pages/welcome/welcome";
 import {Projects} from "../providers/projects/projects";
 import {Api} from "../providers/api/api";
 import {User} from "../providers/user/user";
+import {EmployeesPage} from "../pages/employees/employees";
+import {Employees} from "../providers/employees/employees";
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import {User} from "../providers/user/user";
     Tab2DetailPage,
     Tab3Page,
     Tab4Page,
+    EmployeesPage,
     TabsPage
   ],
   imports: [
@@ -49,6 +52,7 @@ import {User} from "../providers/user/user";
     Tab2DetailPage,
     Tab3Page,
     Tab4Page,
+    EmployeesPage,
     TabsPage
   ],
   providers: [
@@ -57,6 +61,7 @@ import {User} from "../providers/user/user";
     Api,
     User,
     Projects,
+    Employees,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

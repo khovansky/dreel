@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {EmployeesPage} from "../employees/employees";
 
 /**
  * Generated class for the Tab4Page page.
@@ -20,6 +21,10 @@ export class Tab4Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tab4Page');
+  }
+
+  clickemployee() {
+    this.navCtrl.push(EmployeesPage);
   }
 
 }
