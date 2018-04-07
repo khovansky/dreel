@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 
 import {Employee} from "../../models/employee";
 import {Employees} from "../../providers/employees/employees";
+import {EmployeesDetailPage} from "../employees-detail/employees-detail";
 
 
 
@@ -26,7 +27,13 @@ export class EmployeesPage {
       });
     }, () => {});
 
+
+
     console.log('ionViewDidLoad EmployeesPage');
+  }
+
+  openItem(user: Employee) {
+    this.navCtrl.push(EmployeesDetailPage, {user: user});
   }
 
 

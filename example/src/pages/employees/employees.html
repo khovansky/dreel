@@ -10,8 +10,8 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding >
-      <button ion-item *ngFor="let user of currentItems">
+    <ion-item-sliding *ngFor="let user of currentItems" >
+      <button ion-item (click)="openItem(user)">
         <img item-start src="assets/imgs/pop.png">
         <h3>{{user.name}}</h3>
         <p> Не в сети | 0 ч. 00 мин.</p>

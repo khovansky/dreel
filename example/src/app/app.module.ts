@@ -24,6 +24,7 @@ import {Api} from "../providers/api/api";
 import {User} from "../providers/user/user";
 import {EmployeesPage} from "../pages/employees/employees";
 import {Employees} from "../providers/employees/employees";
+import {EmployeesDetailPage} from "../pages/employees-detail/employees-detail";
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {Employees} from "../providers/employees/employees";
     Tab3Page,
     Tab4Page,
     EmployeesPage,
+    EmployeesDetailPage,
     TabsPage
   ],
   imports: [
@@ -53,6 +55,7 @@ import {Employees} from "../providers/employees/employees";
     Tab3Page,
     Tab4Page,
     EmployeesPage,
+    EmployeesDetailPage,
     TabsPage
   ],
   providers: [
