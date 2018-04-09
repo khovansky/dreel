@@ -13,10 +13,6 @@
     <ion-card >
       <ion-item>
         <h1>◉ {{item.name}}</h1>
-        <!--<ion-avatar item-start>-->
-          <!--<img src="assets/imgs/red.png">-->
-        <!--</ion-avatar>-->
-
       </ion-item>
 
       <ion-card-content>
@@ -25,7 +21,7 @@
         <p> Потраченные часы: {{item.time}}</p>
       </ion-card-content>
 
-      <button ion-button full (click)="openPage()">
+      <button ion-button full (click)="openItem(item)">
         подробнее
       </button>
     </ion-card>

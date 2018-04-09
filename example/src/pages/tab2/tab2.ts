@@ -4,6 +4,7 @@ import {Tab2DetailPage} from "../tab2-detail/tab2-detail";
 
 import { Projects } from '../../providers/providers';
 import { Project } from '../../models/project';
+import {Employee} from "../../models/employee";
 
 @IonicPage()
 @Component({
@@ -28,7 +29,7 @@ export class Tab2Page {
     console.log('ionViewDidLoad Tab2Page');
   }
 
-  openPage() {
-    this.navCtrl.push(Tab2DetailPage);
+  openItem(item: Project) {
+    this.navCtrl.push(Tab2DetailPage, {item: item});
   }
 }

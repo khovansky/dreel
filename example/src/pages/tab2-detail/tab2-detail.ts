@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab2-detail.html',
 })
 export class Tab2DetailPage {
+  item: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item=navParams.get('item');
   }
 
   ionViewDidLoad() {
