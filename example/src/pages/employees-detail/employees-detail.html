@@ -15,13 +15,37 @@
 
 <ion-content padding>
 
-  <div class="item-profile" text-center>
+  <div class="item-profile">
     <img item-start src="{{user.photo}}">
   </div>
 
-  <div class="employees-detail" padding>
-    <h2>{{user.name}}</h2>
-    <p>{{user.id}}</p>
+  <div padding>
+    <ion-item>
+      <h1>{{user.name}}</h1>
+      <ion-row>
+        <ion-col><p>{{user.status}}</p></ion-col>
+        <ion-col><p>{{user.time_today}}</p></ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item>
+      <h2>◉ {{user.project.name}} : {{user.task.name}}</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ставка :</ion-label>
+      <ion-input type="text" placeholder="{{user.rate_value}} руб/ч"></ion-input>
+    </ion-item>
+
+    <button ion-button full>сохранить ставку</button>
+
+    <ion-item>
+      <ion-label>Автоотключение: </ion-label>
+      <ion-input type="text" placeholder="{{user.time_afk}} мин."></ion-input>
+    </ion-item>
+
+    <button ion-button full>сохранить автоотключение</button>
+
   </div>
 
 </ion-content>

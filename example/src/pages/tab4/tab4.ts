@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {EmployeesPage} from "../employees/employees";
+import {InvitePage} from "../invite/invite";
+import {ReportPage} from "../report/report";
 
 /**
  * Generated class for the Tab4Page page.
@@ -25,6 +27,14 @@ export class Tab4Page {
 
   clickemployee() {
     this.navCtrl.push(EmployeesPage);
+  }
+
+  clickinvite() {
+    this.navCtrl.push(InvitePage);
+  }
+
+  clickreport() {
+    this.navCtrl.push(ReportPage);
   }
 
 }

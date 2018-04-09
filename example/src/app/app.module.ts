@@ -26,6 +26,8 @@ import {EmployeesPage} from "../pages/employees/employees";
 import {Employees} from "../providers/employees/employees";
 import {EmployeesDetailPage} from "../pages/employees-detail/employees-detail";
 import {Tab1s} from "../providers/tab1/tab1s";
+import {ReportPage} from "../pages/report/report";
+import {InvitePage} from "../pages/invite/invite";
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import {Tab1s} from "../providers/tab1/tab1s";
     Tab4Page,
     EmployeesPage,
     EmployeesDetailPage,
+    ReportPage,
+    InvitePage,
     TabsPage
   ],
   imports: [
@@ -57,6 +61,8 @@ import {Tab1s} from "../providers/tab1/tab1s";
     Tab4Page,
     EmployeesPage,
     EmployeesDetailPage,
+    ReportPage,
+    InvitePage,
     TabsPage
   ],
   providers: [
