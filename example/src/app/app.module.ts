@@ -25,6 +25,7 @@ import {User} from "../providers/user/user";
 import {EmployeesPage} from "../pages/employees/employees";
 import {Employees} from "../providers/employees/employees";
 import {EmployeesDetailPage} from "../pages/employees-detail/employees-detail";
+import {Tab1s} from "../providers/tab1/tab1s";
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import {EmployeesDetailPage} from "../pages/employees-detail/employees-detail";
     User,
     Projects,
     Employees,
+    Tab1s,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

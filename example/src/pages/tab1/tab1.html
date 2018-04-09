@@ -9,25 +9,27 @@
 
 
 <ion-content padding>
-  <ion-card>
+  <ion-list *ngFor="let item of currentItems">
 
-    <ion-item>
+    <ion-card>
+
+      <ion-item>
       <ion-avatar item-start>
-        <img src="assets/imgs/pop.png">
+        <img src="{{item.user_photo}}">
       </ion-avatar>
-      <h2>Yakov Khovansky</h2>
+      <h2>{{item.user_name}}</h2>
       <p>01.04.2018, 13:50</p>
     </ion-item>
 
-    <ion-card-content>
-      <p> Длительность: </p>
-      <p> Проект: </p>
-      <p> Задача: </p>
-      <p> Рейт: </p>
-      <p> Причина: </p>
+      <ion-card-content>
+      <p> Длительность: {{item.length}} мин </p>
+      <p> Проект: {{item.project_name}} </p>
+      <p> Задача: {{item.task_name}}</p>
+      <p> Рейт: {{item.rate_value}} руб/ч </p>
+      <p> Причина: {{item.reason}} </p>
     </ion-card-content>
 
-    <ion-row>
+      <ion-row>
       <ion-col>
         <button ion-button clear>
           ПРИНЯТЬ
@@ -40,6 +42,6 @@
       </ion-col>
     </ion-row>
 
-  </ion-card>
-
+    </ion-card>
+  </ion-list>
 </ion-content>

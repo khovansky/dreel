@@ -22,8 +22,8 @@ export class EmployeesPage {
     this.employees.getItems().subscribe((resp: any) => {
       console.log(resp);
 
-      resp.users.forEach(user => {
-        this.currentItems.push(new Employee(user));
+      resp.items.forEach(item => {
+        this.currentItems.push(new Employee(item));
       });
     }, () => {});
 

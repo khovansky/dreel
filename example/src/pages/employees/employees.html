@@ -10,11 +10,11 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let user of currentItems" >
-      <button ion-item (click)="openItem(user)">
-        <img item-start src="assets/imgs/pop.png">
-        <h3>{{user.name}}</h3>
-        <p> Не в сети | 0 ч. 00 мин.</p>
+    <ion-item-sliding *ngFor="let item of currentItems" >
+      <button ion-item (click)="openItem(item)">
+        <img item-start src="{{item.photo}}">
+        <h3>{{item.name}}</h3>
+        <p> {{item.status}} | {{item.time_today}}</p>
       </button>
     </ion-item-sliding>
   </ion-list>
