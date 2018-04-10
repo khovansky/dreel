@@ -12,7 +12,7 @@
   <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems" >
       <button ion-item (click)="openItem(item)">
-        <img item-start src="{{item.photo}}">
+        <img style="width: 80px; height: 80px" item-start src="{{item.photo}}">
         <h3>{{item.name}}</h3>
         <p> {{item.status}} | {{item.time_today}}</p>
       </button>
