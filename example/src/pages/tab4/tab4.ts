@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {EmployeesPage} from "../employees/employees";
 import {InvitePage} from "../invite/invite";
 import {ReportPage} from "../report/report";
+import {LoginPage} from "../login/login";
 
 /**
  * Generated class for the Tab4Page page.
@@ -35,6 +36,10 @@ export class Tab4Page {
 
   clickreport() {
     this.navCtrl.push(ReportPage);
+  }
+
+  onExit() {
+    this.navCtrl.push(LoginPage);
   }
 
 }
