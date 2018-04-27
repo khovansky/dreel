@@ -15,6 +15,8 @@ export class EmployeesDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, employees: Employees) {
     this.user=navParams.get('user');
+    // if (this.user.project.name=null) { this.user.progect.name="no inforamation"};
+    // if (this.user.task.name=null) { this.user.task.name="no information"};
   }
 
   ionViewDidLoad() {

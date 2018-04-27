@@ -18,7 +18,10 @@
         <img src="{{item.user_photo}}">
       </ion-avatar>
       <h2>{{item.user_name}}</h2>
-      <p>01.04.2018, 13:50</p>
+        <p ng-non-bindable>{{item.timestamp | date:'MM/dd/yyyy  h:mma'}}</p>
+        <!--<span ng-non-bindable>{{item.timestamp | date:'MM/dd/yyyy @ h:mma'}}</span>:-->
+        <!--{{item.timestamp | date:'MM/dd/yyyy | h:mma'}}<br>-->
+      <!--<p>01.04.2018, 13:50</p>-->
     </ion-item>
 
       <ion-card-content>
