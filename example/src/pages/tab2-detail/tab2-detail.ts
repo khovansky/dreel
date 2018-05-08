@@ -16,8 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class Tab2DetailPage {
   item: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public project: ProjectProvider) {
     this.item=navParams.get('item');
+    // this.project.getRates();
   }
 
   ionViewDidLoad() {

@@ -6,13 +6,27 @@ import { Api } from '../api/api';
 
 @Injectable()
 export class User {
+    access_token: any;
   _user: any;
 
-  constructor(public api: Api) { }
+  constructor(public api: Api) {
 
-  /*login(accountInfo: any) {
+  }
+
+  checkAccessToken() {
+      if(window.localStorage.getItem('access_token')){
+          this.access_token = window.localStorage.getItem('access_token');
+          return true;
+      }
+      return false;
+  }
+
+  login(accountInfo: any) {
     let seq = this.api.post('http://desktop.dreel.ru/user/login', accountInfo);
-
+    //Сохранение токена
+    // window.localStorage.setItem('access_token', response.access_token);
+    // this.access_token = response.access_token;
+    
 // seq.subscribe((res: any) => {
     // //   // If the API returned a successful response, mark the user as logged in
     // //   if (res.status == 'success') {

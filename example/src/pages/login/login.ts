@@ -23,7 +23,10 @@ export class LoginPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public user: User) {
+      if(this.user.checkAccessToken()){
+          this.navCtrl.push(TabsPage);
+      }
   }
 
   ionViewDidLoad() {

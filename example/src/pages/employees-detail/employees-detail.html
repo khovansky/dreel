@@ -31,13 +31,14 @@
     <ion-item *ngIf="user.project.name">
       <h2 >◉ {{user.project.name}} : {{user.task.name}}</h2>
     </ion-item>
+    <form (submit)="refreshRate($event)">
+        <ion-item>
+          <ion-label>Ставка(руб/ч):</ion-label>
+          <ion-input type="text" [(ngModel)]="user.rate_value" name="rate_value"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label>Ставка :</ion-label>
-      <ion-input type="text" placeholder="{{user.rate_value}} руб/ч"></ion-input>
-    </ion-item>
-
-    <button ion-button full>сохранить ставку</button>
+        <button ion-button full>сохранить ставку</button>
+    </form>
 
     <ion-item>
       <ion-label>Автоотключение: </ion-label>
