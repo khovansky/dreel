@@ -22,23 +22,13 @@ export class User {
 
   login(accountInfo: any) {
     console.log(accountInfo);
-    let seq = this.api.post('http://desktop.dreel.ru/user/login', accountInfo);
-    //Сохранение токена
-    // localStorage.setItem('access_token', response.access_token);
-    // this.access_token = response.access_token;
-    console.log(seq);
-
-// seq.subscribe((res: any) => {
-    // //   // If the API returned a successful response, mark the user as logged in
-    // //   if (res.status == 'success') {
-    // //     this._loggedIn(res);
-    // //   } else {
-    // //   }
-    // // }, err => {
-    // //   console.error('ERROR', err);
-    // });
-
+    let seq = this.api.post('http://api.dreel.ru/desktop/auth', accountInfo);
     return seq;
+  }
+
+  saveAccessToken(access_token) {
+      localStorage.setItem('access_token', access_token);
+      this.access_token = access_token;
   }
 
   // signup(accountInfo: any) {
