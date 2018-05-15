@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the Tab2DetailPage page.
  *
@@ -16,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class Tab2DetailPage {
   item: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public project: ProjectProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.item=navParams.get('item');
     // this.project.getRates();
   }

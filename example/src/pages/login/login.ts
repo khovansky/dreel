@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {TabsPage} from "../tabs/tabs";
-
+import { User } from '../../providers/providers';
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,8 +17,8 @@ import {TabsPage} from "../tabs/tabs";
 export class LoginPage {
 
   account: { email: string, password: string } = {
-    email: 'test@example.com',
-    password: 'test'
+    email: 'yakov.khovansky@yandex.ru',
+    password: 'dreelthebest'
   };
 
 
@@ -50,7 +50,7 @@ export class LoginPage {
     //             position: 'top'
     //         });
     //         toast.present();
-    //         this.navCtrl.push(MainPage);
+    //         this.navCtrl.push(TabsPage);
     //     }
     //   console.log(resp);
     //   // this.navCtrl.push(MainPage);

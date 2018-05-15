@@ -12,7 +12,7 @@ export class Employees {
 
   getItems() {
     let seq = this.api.post('http://api.dreel.ru/users/overall/', {
-      access_token: User.access_token
+      access_token: '566af69bb00e7bbfa9eceeb4b8d14e5a2321'
     });
     return seq;
   }

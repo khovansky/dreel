@@ -14,8 +14,8 @@
   </ion-title>
 
 
-    <ion-label style="padding-top: 100px" text-center>http://auth.dreel.ru/invite/redline</ion-label>
-    <button ion-button full>копировать ссылку</button>
+    <ion-label style="padding-top: 100px" text-center #linkForCopying>{{link}}</ion-label>
+    <button (click)="copy()" ion-button full>копировать ссылку</button>
 
 
 

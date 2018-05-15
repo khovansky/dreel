@@ -28,6 +28,7 @@ import {EmployeesDetailPage} from "../pages/employees-detail/employees-detail";
 import {Tab1s} from "../providers/tab1/tab1s";
 import {ReportPage} from "../pages/report/report";
 import {InvitePage} from "../pages/invite/invite";
+import {ClipboardService} from "../shared/services/clipboard.service";
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import {InvitePage} from "../pages/invite/invite";
     Projects,
     Employees,
     Tab1s,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ClipboardService
   ]
 })
 export class AppModule {}
