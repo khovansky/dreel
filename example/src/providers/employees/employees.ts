@@ -2,17 +2,16 @@ import 'rxjs/add/operator/toPromise';
 
 import { Injectable } from '@angular/core';
 
-import { User } from '../providers'
+import { User } from '../user/user';
 import { Api } from '../api/api';
-import {Employee} from "../../models/employee";
 
 @Injectable()
 export class Employees {
-  constructor(public api: Api) { }
+  constructor(public api: Api, private user: User) { }
 
   getItems() {
     let seq = this.api.post('http://api.dreel.ru/users/overall/', {
-      access_token: '566af69bb00e7bbfa9eceeb4b8d14e5a2321'
+      access_token: this.user.access_token
     });
     return seq;
   }
@@ -23,11 +22,22 @@ export class Employees {
 
     refreshRate(user) {
         const queryData = {
-            access_token: '566af69bb00e7bbfa9eceeb4b8d14e5a2321',
+            access_token: this.user.access_token,
             user_id: user.id,
             rate_value: user.rate_value,
         };
 
         let seq = this.api.post('//api.dreel.ru/users/rate', queryData).subscribe(response => console.log(response));
+    }
+
+    refreshTimeRate(user) {
+      const queryData = {
+        access_token: this.user.access_token,
+        user_id: user.id,
+        rate_value: user.time_afk,
+      };
+
+      let seq = this.api.post('//api.dreel.ru/users/rate', queryData).subscribe(response => console.log(response));
+
     }
 }

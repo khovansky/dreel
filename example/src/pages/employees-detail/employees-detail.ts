@@ -13,8 +13,7 @@ export class EmployeesDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public employees: Employees) {
     this.user=navParams.get('user');
-    // if (this.user.project.name=null) { this.user.progect.name="no inforamation"};
-    // if (this.user.task.name=null) { this.user.task.name="no information"};
+
   }
 
   ionViewDidLoad() {
@@ -23,7 +22,11 @@ export class EmployeesDetailPage {
 
   refreshRate(event) {
       event.preventDefault();
-      this.employees.refreshRate(this.user);
+      this.employees.refreshRate(this.user)
   }
 
+  refreshTimeRate(event) {
+    event.preventDefault();
+    this.employees.refreshTimeRate(this.user);
+  }
 }
