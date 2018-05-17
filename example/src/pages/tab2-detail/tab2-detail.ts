@@ -44,4 +44,9 @@ export class Tab2DetailPage implements OnInit{
     console.log('ionViewDidLoad Tab2DetailPage');
   }
 
+  refreshRateProject(event) {
+    event.preventDefault();
+    this.users.refreshRateProject(this.users);
+  }
+
 }
