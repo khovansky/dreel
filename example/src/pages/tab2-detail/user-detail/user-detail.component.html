@@ -1,7 +1,16 @@
-<ion-item>
-  <ion-avatar item-start>
+<!--<ion-item>-->
+  <!--<ion-avatar item-start>-->
+    <!--<img [src]="user.user_photo">-->
+  <!--</ion-avatar>-->
+  <!--<p>{{user.user_name}}</p>-->
+  <!--<ion-input [(ngModel)]="test"></ion-input>-->
+<!--</ion-item>-->
+
+<form (submit)="refreshRate($event)">
+  <ion-item>
     <img [src]="user.user_photo">
-  </ion-avatar>
-  <p>{{user.user_name}}</p>
-  <ion-input [(ngModel)]="test"></ion-input>
-</ion-item>
+    <ion-label>{{user.user_name}}</ion-label>
+    <ion-input type="text" [(ngModel)]="user.rate_value" name="rate_value"></ion-input>
+  </ion-item>
+  <button ion-button full>сохранить ставку в проекте</button>
+</form>
