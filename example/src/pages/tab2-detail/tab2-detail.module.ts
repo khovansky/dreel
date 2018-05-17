@@ -4,7 +4,7 @@ import { Tab2DetailPage } from './tab2-detail';
 
 @NgModule({
   declarations: [
-    Tab2DetailPage,
+    Tab2DetailPage
   ],
   imports: [
     IonicPageModule.forChild(Tab2DetailPage),

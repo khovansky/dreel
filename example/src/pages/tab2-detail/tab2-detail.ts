@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { Projects} from "../../providers/projects/projects";
+import { User } from '../../models/User';
+import { IUser } from '../../interfaces/IUser';
 
 
 /**
@@ -14,12 +18,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-tab2-detail',
   templateUrl: 'tab2-detail.html',
 })
-export class Tab2DetailPage {
+export class Tab2DetailPage implements OnInit{
   item: any;
+  users: User[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private projects: Projects) {
     this.item=navParams.get('item');
+    this.users = [];
     // this.project.getRates();
+  }
+
+  ngOnInit (){
+    this.projects.getProjectDetail(this.item.id).subscribe((resp: any) => {
+      console.log(resp.items);
+      resp.items.forEach((item: IUser) => {
+        const user = new User(item);
+        this.users.push(user);
+      });
+
+      console.log(this.users);
+    })
   }
 
   ionViewDidLoad() {

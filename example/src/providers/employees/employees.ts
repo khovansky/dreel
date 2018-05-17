@@ -27,17 +27,17 @@ export class Employees {
             rate_value: user.rate_value,
         };
 
-        let seq = this.api.post('//api.dreel.ru/users/rate', queryData).subscribe(response => console.log(response));
+        let seq = this.api.post('http://api.dreel.ru/users/rate', queryData).subscribe(response => console.log(response));
     }
 
     refreshTimeRate(user) {
       const queryData = {
         access_token: this.user.access_token,
         user_id: user.id,
-        rate_value: user.time_afk,
+        time_afk: user.time_afk,
       };
 
-      let seq = this.api.post('//api.dreel.ru/users/rate', queryData).subscribe(response => console.log(response));
+      let seq = this.api.post('http://api.dreel.ru/users/time', queryData).subscribe(response => console.log(response));
 
     }
 }

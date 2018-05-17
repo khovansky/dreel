@@ -1,26 +1,18 @@
 import 'rxjs/add/operator/toPromise';
 
-
 import { Injectable } from '@angular/core';
 
 import { Api } from '../api/api';
 import { User} from "../user/user";
 
 @Injectable()
-export class Projects {
+export class Invite {
   constructor(public api: Api, private user: User) { }
 
-  getItems() {
-    let seq = this.api.post('http://api.dreel.ru/projects/', {
+  getLinks() {
+    let seq = this.api.post('http://api.dreel.ru/company/inviteinfo/', {
       access_token: this.user.access_token
     });
     return seq;
-  }
-
-  getProjectDetail(id:number){
-    return this.api.post('http://api.dreel.ru/project/rates/', {
-      access_token: this.user.access_token,
-      project_id: id
-    })
   }
 }

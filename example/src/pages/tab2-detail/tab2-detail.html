@@ -10,10 +10,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item>
-      <h1>Yakov Khovansky</h1>
-      <p>Тариф: 0.01$ </p>
-    </ion-item>
+    <user-detail *ngFor="let user of users" [user]="user"></user-detail>
   </ion-list>
 
 </ion-content>
