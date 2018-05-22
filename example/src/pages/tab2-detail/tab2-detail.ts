@@ -25,6 +25,7 @@ export class Tab2DetailPage implements OnInit{
   constructor(public navCtrl: NavController, public navParams: NavParams, private projects: Projects) {
     this.item=navParams.get('item');
     this.users = [];
+    this.projects = projects;
     // this.project.getRates();
   }
 
@@ -46,7 +47,7 @@ export class Tab2DetailPage implements OnInit{
 
   refreshRateProject(event) {
     event.preventDefault();
-    this.users.refreshRateProject(this.users);
+    // this.users.refreshRateProject(this.users);
   }
 
 }

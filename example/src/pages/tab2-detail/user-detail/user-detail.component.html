@@ -6,11 +6,41 @@
   <!--<ion-input [(ngModel)]="test"></ion-input>-->
 <!--</ion-item>-->
 
-<form (submit)="refreshRateProject($event)">
+<!--<form (submit)="refreshRateProject($event)">-->
+  <!--<img [src]="user.user_photo">-->
+  <!--<ion-label>{{user.user_name}}</ion-label>-->
+  <!--<ion-item>-->
+    <!--<ion-label>Ставка: </ion-label>-->
+    <!--<ion-input type="text" [(ngModel)]="user.rate_value" name="rate_value"></ion-input>-->
+    <!--<ion-label>(руб./час)</ion-label>-->
+  <!--</ion-item>-->
+  <!--<button ion-button full>сохранить ставку в проекте</button>-->
+<!--</form>-->
+
+<!--<div class="item-profile">-->
+  <!--<img style="width: 200px; height: 200px" item-start src="{{user.photo}}">-->
+<!--</div>-->
+
+
+
+<div padding>
+  <!--<div>-->
+  <!--<img style="width:100px; height: 100px; margin-left: 35%" item-start [src]="user.user_photo">-->
+  <!--<ion-label padding style="width: 100%">{{user.user_name}}</ion-label>-->
+  <!--</div>-->
+
   <ion-item>
-    <img [src]="user.user_photo">
-    <ion-label>{{user.user_name}}</ion-label>
-    <ion-input type="text" [(ngModel)]="user.rate_value" name="rate_value"></ion-input>
+    <ion-avatar item-start>
+      <img [src]="user.user_photo">
+    </ion-avatar>
+    <h2>{{user.user_name}}</h2>
   </ion-item>
-  <button ion-button full>сохранить ставку в проекте</button>
-</form>
+
+  <form (submit)="refreshRateProject($event)">
+    <ion-item>
+      <ion-label>Ставка(руб/ч):</ion-label>
+      <ion-input type="text" [(ngModel)]="user.rate_value" name="rate_value"></ion-input>
+    </ion-item>
+    <button ion-button full>сохранить ставку в проекте</button>
+  </form>
+</div>

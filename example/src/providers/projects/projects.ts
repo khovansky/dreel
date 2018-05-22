@@ -23,4 +23,17 @@ export class Projects {
       project_id: id
     })
   }
+
+  refreshRateProject(projects, user) {
+    const queryData = {
+      access_token: this.user.access_token,
+      project_id: projects.id,
+      user_id : user.id,
+      value : user.value,
+    };
+
+    let seq = this.api.post('http://api.dreel.ru/project/rates/add', queryData).subscribe(response => console.log(response));
+
+  }
+
 }

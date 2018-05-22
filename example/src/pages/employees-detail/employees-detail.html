@@ -23,7 +23,7 @@
       </ion-row>
     </ion-item>
 
-    <ion-item *ngIf="user.project.name">
+    <ion-item *ngIf="user.project && user.project.name">
       <h2 >◉ {{user.project.name}} : {{user.task.name}}</h2>
     </ion-item>
 

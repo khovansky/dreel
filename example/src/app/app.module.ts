@@ -31,6 +31,12 @@ import {InvitePage} from "../pages/invite/invite";
 import {ClipboardService} from "../shared/services/clipboard.service";
 import {Invite} from "../providers/invite/invite";
 import {UserDetailComponent} from "../pages/tab2-detail/user-detail/user-detail.component";
+import {MonthReportPage} from "../pages/month-report/month-report";
+import {MonthReportListPage} from "../pages/month-report-list/month-report-list";
+import {EattimeReportPage} from "../pages/eattime-report/eattime-report";
+import {EattimeReportListPage} from "../pages/eattime-report-list/eattime-report-list";
+import {PillartimeReportPage} from "../pages/pillartime-report/pillartime-report";
+import {PillartimeReportListPage} from "../pages/pillartime-report-list/pillartime-report-list";
 
 
 @NgModule({
@@ -47,7 +53,13 @@ import {UserDetailComponent} from "../pages/tab2-detail/user-detail/user-detail.
     ReportPage,
     InvitePage,
     TabsPage,
-    UserDetailComponent
+    UserDetailComponent,
+    MonthReportPage,
+    MonthReportListPage,
+    EattimeReportPage,
+    EattimeReportListPage,
+    PillartimeReportPage,
+    PillartimeReportListPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +79,13 @@ import {UserDetailComponent} from "../pages/tab2-detail/user-detail/user-detail.
     EmployeesDetailPage,
     ReportPage,
     InvitePage,
-    TabsPage
+    TabsPage,
+    MonthReportPage,
+    MonthReportListPage,
+    EattimeReportPage,
+    EattimeReportListPage,
+    PillartimeReportPage,
+    PillartimeReportListPage
   ],
   providers: [
     StatusBar,
