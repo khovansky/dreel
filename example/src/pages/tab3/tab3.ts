@@ -1,8 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as moment from 'moment';
 import { interval } from 'rxjs/observable/interval';
-import { Subscription } from 'rxjs/Subscription';
 import {Subject} from "rxjs/Subject";
 import {takeUntil} from "rxjs/operators";
 
