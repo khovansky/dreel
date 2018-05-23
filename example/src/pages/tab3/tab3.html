@@ -14,10 +14,9 @@
     <img src="assets/imgs/logodreel.png">
   </ion-title>
 
-  <ion-label style="padding-top: 100px" text-center>
-    ТУТ БУДЕТ ЧТО-ТО НЕВЕРОЯТНОЕ, <br>
-    НО ПОКА НИКТО НЕ ЗНАЕТ, ЧТО ИМЕННО
-  </ion-label>
+  <ion-label style="padding-top: 100px" text-center>ВРЕМЯ КАПАЕТ И КАПАЕТ</ion-label>
+
+  <ion-label text-center>{{timeFormatted}}</ion-label>
 
   <button ion-button full (click)="start()">start</button>
   <button ion-button full (click)="stop()">stop</button>

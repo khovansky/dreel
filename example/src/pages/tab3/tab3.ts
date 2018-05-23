@@ -51,7 +51,7 @@ export class Tab3Page implements OnInit, OnDestroy {
 
     this.intervalSubscrition = this.interval.subscribe(() => {
       this.currentTime.add(1, 'seconds');
-      this.timeFormatted = this.currentTime.format();
+      this.timeFormatted = this.currentTime.format("mm:ss");
       console.log(this.timeFormatted);
     });
   }
