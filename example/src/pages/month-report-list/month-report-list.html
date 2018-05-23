@@ -7,12 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>month-report-list</ion-title>
+    <ion-title>Ежемесячный отчет</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-item>
+      <ion-label>От:</ion-label>
+      <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MM.YYYY" [(ngModel)]="startTime"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>До:</ion-label>
+      <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MM.YYYY" [(ngModel)]="endTime"></ion-datetime>
+    </ion-item>
+
+  <button ion-button full (click)="loadReport()">загрузить отчет</button>
+
 
 </ion-content>

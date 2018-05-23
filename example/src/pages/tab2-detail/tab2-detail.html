@@ -10,7 +10,7 @@
 
 <ion-content padding>
   <ion-list>
-    <user-detail *ngFor="let user of users" [user]="user"></user-detail>
+    <user-detail *ngFor="let user of users" [project]="item" [user]="user"></user-detail>
   </ion-list>
 
 </ion-content>

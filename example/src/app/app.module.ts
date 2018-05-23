@@ -37,6 +37,7 @@ import {EattimeReportPage} from "../pages/eattime-report/eattime-report";
 import {EattimeReportListPage} from "../pages/eattime-report-list/eattime-report-list";
 import {PillartimeReportPage} from "../pages/pillartime-report/pillartime-report";
 import {PillartimeReportListPage} from "../pages/pillartime-report-list/pillartime-report-list";
+import {Reports} from "../providers/reports/reports";
 
 
 @NgModule({
@@ -97,7 +98,9 @@ import {PillartimeReportListPage} from "../pages/pillartime-report-list/pillarti
     Tab1s,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ClipboardService,
-    Invite
+    Invite,
+    Reports
+
   ]
 })
 export class AppModule {}

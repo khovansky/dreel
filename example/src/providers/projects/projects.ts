@@ -28,8 +28,8 @@ export class Projects {
     const queryData = {
       access_token: this.user.access_token,
       project_id: projects.id,
-      user_id : user.id,
-      value : user.value,
+      user_id : user.user_id,
+      value : user.rate_value,
     };
 
     let seq = this.api.post('http://api.dreel.ru/project/rates/add', queryData).subscribe(response => console.log(response));
