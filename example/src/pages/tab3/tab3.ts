@@ -14,7 +14,6 @@ export class Tab3Page{
   public currentTime;
   public timeFormatted;
   public interval;
-  public i = 0;
   public stopInterval: Subject<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
