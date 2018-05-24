@@ -13,8 +13,8 @@ export class Reports {
   loadReport(dateStart, dateFinish) {
     let seq = this.api.post('http://api.dreel.ru/reports/overall/', {
       access_token: this.user.access_token,
-      date_from: dateStart,
-      date_to: dateFinish
+      date_start: dateStart,
+      date_finish: dateFinish
     });
     return seq;
   }
