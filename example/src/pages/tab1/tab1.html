@@ -14,36 +14,30 @@
     <ion-card>
 
       <ion-item>
-      <ion-avatar item-start>
-        <img src="{{item.user_photo}}">
-      </ion-avatar>
-      <h2>{{item.user_name}}</h2>
+        <ion-avatar item-start>
+          <img src="{{item.user_photo}}">
+        </ion-avatar>
+        <h2>{{item.user_name}}</h2>
         <p ng-non-bindable>{{item.timestamp * 1000 | date:'dd.MM.yyyy HH:mm'}}</p>
-        <!--<span ng-non-bindable>{{item.timestamp | date:'MM/dd/yyyy @ h:mma'}}</span>:-->
-        <!--{{item.timestamp | date:'MM/dd/yyyy | h:mma'}}<br>-->
-      <!--<p>01.04.2018, 13:50</p>-->
-    </ion-item>
+      </ion-item>
 
       <ion-card-content>
-      <p> Длительность: {{item.length}} мин </p>
-      <p> Проект: {{item.project_name}} </p>
-      <p> Задача: {{item.task_name}}</p>
-      <p> Рейт: {{item.rate_value}} руб/ч </p>
-      <p> Причина: {{item.reason}} </p>
-    </ion-card-content>
+        <p> Длительность: {{item.length}} мин </p>
+        <p> Проект: {{item.project_name}} </p>
+        <p> Задача: {{item.task_name}}</p>
+        <p> Рейт: {{item.rate_value}} руб/ч </p>
+        <p> Причина: {{item.reason}} </p>
+      </ion-card-content>
 
       <ion-row>
-      <ion-col>
-        <button ion-button clear>
-          ПРИНЯТЬ
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear>
-          ОТКЛОНИТЬ
-        </button>
-      </ion-col>
-    </ion-row>
+        <ion-col>
+          <button ion-button clear>ПРИНЯТЬ</button>
+        </ion-col>
+
+        <ion-col>
+          <button ion-button clear>ОТКЛОНИТЬ</button>
+        </ion-col>
+      </ion-row>
 
     </ion-card>
   </ion-list>

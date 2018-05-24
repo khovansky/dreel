@@ -7,12 +7,31 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>eattime-report-list</ion-title>
+    <ion-title>Пожиратели времени</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-item>
+    <ion-label>Сотрудник: </ion-label>
+    <ion-select [(ngModel)]="os" submitText="Выбрать" cancelText="Назад">
+      <ion-option value="dos">диплом дипломов</ion-option>
+      <ion-option value="lunix">лазарев артем владиславович</ion-option>
+      <ion-option value="mac7">васильева надежда петровна</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>От:</ion-label>
+    <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MM.YYYY" [(ngModel)]="startTime"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>До:</ion-label>
+    <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MM.YYYY" [(ngModel)]="endTime"></ion-datetime>
+  </ion-item>
+
+  <button ion-button full (click)="loadReport()">загрузить отчет</button>
 
 </ion-content>

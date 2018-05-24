@@ -1,19 +1,13 @@
 
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{user.name}}</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-
   <div class="item-profile">
     <img style="width: 200px; height: 200px" item-start src="{{user.photo}}">
   </div>
-
   <div padding>
     <ion-item>
       <h1>{{user.name}}</h1>
@@ -22,12 +16,9 @@
         <ion-col><p>{{user.time_today}}</p></ion-col>
       </ion-row>
     </ion-item>
-
     <ion-item *ngIf="user.project && user.project.name">
       <h2 >◉ {{user.project.name}} : {{user.task.name}}</h2>
     </ion-item>
-
-
     <form (submit)="refreshRate($event)">
         <ion-item>
           <ion-label>Ставка(руб/ч):</ion-label>
@@ -35,7 +26,6 @@
         </ion-item>
         <button ion-button full>сохранить ставку</button>
     </form>
-
     <form (submit)="refreshTimeRate($event)">
       <ion-item>
         <ion-label>Автоотключение(мин.):</ion-label>
@@ -43,8 +33,5 @@
       </ion-item>
       <button ion-button full>сохранить автоотключение</button>
     </form>
-
-
   </div>
-
 </ion-content>
