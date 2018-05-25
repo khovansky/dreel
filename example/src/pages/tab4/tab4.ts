@@ -39,6 +39,7 @@ export class Tab4Page {
   }
 
   onExit() {
+    localStorage.removeItem('access_token');
     this.navCtrl.push(LoginPage);
   }
 

@@ -19,6 +19,34 @@ export class Reports {
     return seq;
   }
 
+  getUsers() {
+    let seq = this.api.post('http://api.dreel.ru/users/', {
+      access_token: this.user.access_token
+    });
+    return seq;
+  }
+
+  loadReportTime(dateFrom, dateTo, user_id) {
+    let seq = this.api.post('http://api.dreel.ru/reports/apps/', {
+      access_token: this.user.access_token,
+      date_from: dateFrom,
+      date_to: dateTo,
+      user_id: user_id
+    });
+    return seq;
+  }
+
+  loadReportPillarTime(date, user_id) {
+    let seq = this.api.post('http://api.dreel.ru/timesheet/', {
+      access_token: this.user.access_token,
+      date: date,
+      user_id: user_id
+    });
+
+
+      return seq;
+  }
+
 
 }
 

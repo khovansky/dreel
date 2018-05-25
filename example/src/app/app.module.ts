@@ -38,6 +38,7 @@ import {EattimeReportListPage} from "../pages/eattime-report-list/eattime-report
 import {PillartimeReportPage} from "../pages/pillartime-report/pillartime-report";
 import {PillartimeReportListPage} from "../pages/pillartime-report-list/pillartime-report-list";
 import {Reports} from "../providers/reports/reports";
+import { RoundPipe } from "../pipes/round.pipe";
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import {Reports} from "../providers/reports/reports";
     EattimeReportPage,
     EattimeReportListPage,
     PillartimeReportPage,
-    PillartimeReportListPage
+    PillartimeReportListPage,
+    RoundPipe
   ],
   imports: [
     BrowserModule,

@@ -15,10 +15,8 @@
 <ion-content padding>
   <ion-item>
     <ion-label>Сотрудник: </ion-label>
-    <ion-select [(ngModel)]="os" submitText="Выбрать" cancelText="Назад">
-      <ion-option value="dos">диплом дипломов</ion-option>
-      <ion-option value="lunix">лазарев артем владиславович</ion-option>
-      <ion-option value="mac7">васильева надежда петровна</ion-option>
+    <ion-select [(ngModel)]="selectedUser" submitText="Выбрать" cancelText="Назад">
+      <ion-option *ngFor="let user of users" [value]="user">{{ user.name }}</ion-option>
     </ion-select>
   </ion-item>
 
@@ -33,5 +31,39 @@
   </ion-item>
 
   <button ion-button full (click)="loadReport()">загрузить отчет</button>
+
+  <ng-container *ngIf="showData">
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="selectedUser.photo">
+      </ion-avatar>
+      <h2>{{selectedUser.name}}</h2>
+    </ion-item>
+
+    <ion-list>
+      <h2>Приложения</h2>
+      <ion-row *ngFor="let app of apps">
+        <ion-col>
+          <p>{{ app.name }}</p>
+        </ion-col>
+        <ion-col>
+          <p>{{ app.time }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+
+    <ion-list>
+      <h2>Сайты</h2>
+      <ion-row *ngFor="let site of sites">
+        <ion-col>
+          <p>{{ site.url }}</p>
+        </ion-col>
+        <ion-col>
+          <p>{{ site.time }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ng-container>
+
 
 </ion-content>

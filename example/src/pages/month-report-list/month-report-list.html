@@ -27,26 +27,26 @@
   <button ion-button full (click)="loadReport()">загрузить отчет</button>
 
   <ion-list>
-    <ion-card>
+    <ion-card *ngFor="let report of reports">
       <ion-card-header>
         <ion-item>
           <ion-avatar item-start>
-            <img src="../../assets/imgs/pop.png">
+            <img [src]="report.photo">
           </ion-avatar>
-          <h2>Cher</h2>
-          <p>Всего заработал: </p>
+          <h2>{{  report.name }}</h2>
+          <p>Всего заработал: {{ report.totalSum | round:100 }}</p>
         </ion-item>
       </ion-card-header>
 
       <ion-card-content>
-        <ion-item>
-          <h3>Project ---</h3>
+        <ion-item *ngFor="let project of report.projects">
+          <h3>{{ project.name }}</h3>
           <ion-row>
             <ion-col>
-              <p>100$</p>
+              <p>{{ project.money | round:100 }}</p>
             </ion-col>
             <ion-col>
-              <p>2 ч. 32 мин.</p>
+              <p>{{ project.time_pretty }}</p>
             </ion-col>
           </ion-row>
         </ion-item>
