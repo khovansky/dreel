@@ -17,6 +17,7 @@ export class PillartimeReportListPage implements OnInit {
   public users: IUserListItem[];
   public selectedUser: IUserListItem;
   public data : number;
+  public startTime: Date;
 
   @ViewChild('barCanvas') barCanvas;
 
@@ -26,6 +27,7 @@ export class PillartimeReportListPage implements OnInit {
               public navParams: NavParams,
               private _reports: Reports) {
     this.users = [];
+    // this._reports.getUsers().subscribe((data: any) => this.users = data.users);
   }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class PillartimeReportListPage implements OnInit {
     this.data=1526835599;
     this.showData = false;
     this._reports.loadReportPillarTime(this.data, this.selectedUser.id)
-      .subscribe((data: any) => {
+      .subscribe((date: any) => {
         this.showData = true;
       })
   }
