@@ -33,15 +33,18 @@
   <button ion-button full (click)="loadReport()">загрузить отчет</button>
 
   <ng-container *ngIf="showData">
-    <ion-item>
+    <ion-item padding>
       <ion-avatar item-start>
         <img [src]="selectedUser.photo">
       </ion-avatar>
-      <h2>{{selectedUser.name}}</h2>
+      <h1>{{selectedUser.name}}</h1>
     </ion-item>
 
-    <ion-list>
-      <h2>Приложения</h2>
+    <ion-list padding>
+      <ion-item>
+        <ion-icon name="laptop" item-start></ion-icon>
+        <h2>Приложения</h2>
+      </ion-item>
       <ion-row *ngFor="let app of apps">
         <ion-col>
           <p>{{ app.name }}</p>
@@ -52,8 +55,11 @@
       </ion-row>
     </ion-list>
 
-    <ion-list>
-      <h2>Сайты</h2>
+    <ion-list padding>
+      <ion-item>
+        <ion-icon name="globe" item-start></ion-icon>
+        <h2>Сайты</h2>
+      </ion-item>
       <ion-row *ngFor="let site of sites">
         <ion-col>
           <p>{{ site.url }}</p>
