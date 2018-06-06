@@ -16,22 +16,21 @@
     </ion-select>
   </ion-item>
 
-  <ion-item>
-    <ion-label>Неделя: </ion-label>
-    <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MM.YYYY" [(ngModel)]="startTime"></ion-datetime>
-  </ion-item>
-
   <button ion-button full (click)="loadReport()">загрузить отчет</button>
 
   <ng-container *ngIf="showData">
+    <ion-item>
+      <h1>{{nameTime}}</h1>
+      <p> Итого: {{allTimeHours}} ч. {{allTimeMinute}} мин.</p>
+    </ion-item>
+
     <ion-card>
       <ion-card-header>
-        Bar Chart
       </ion-card-header>
       <ion-card-content>
-        <canvas #barCanvas></canvas>
+        <canvas style="height: 500px" #barCanvas></canvas>
       </ion-card-content>
     </ion-card>
   </ng-container>
-  
+
 </ion-content>

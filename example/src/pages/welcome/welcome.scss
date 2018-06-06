@@ -1,9 +1,10 @@
 page-welcome {
   .splash-bg {
+    padding-top: 5%;
     position: relative;
-    background: url('../assets/imgs/splashbg.png') no-repeat transparent;
+    background: url('../assets/imgs/logodreel.png') no-repeat transparent;
     background-size: cover;
-    height: 45%;
+    height: 30%;
     z-index: 1;
     background-repeat: repeat-x;
     animation: animatedBackground 40s linear infinite;
@@ -22,10 +23,10 @@ page-welcome {
   }
   .splash-logo {
     margin: auto;
-    background: url('../assets/imgs/appicon.png') repeat transparent;
+    background: url('../assets/imgs/ololo.png') repeat transparent;
     background-size: 100%;
-    width: 128px;
-    height: 128px;
+    width: 64px;
+    height: 64px;
   }
   .splash-intro {
     font-size: 18px;

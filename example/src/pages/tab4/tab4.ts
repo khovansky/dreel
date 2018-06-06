@@ -4,6 +4,8 @@ import {EmployeesPage} from "../employees/employees";
 import {InvitePage} from "../invite/invite";
 import {ReportPage} from "../report/report";
 import {LoginPage} from "../login/login";
+import {PillartimeReportPage} from "../pillartime-report/pillartime-report";
+import {PillartimeReportListPage} from "../pillartime-report-list/pillartime-report-list";
 
 /**
  * Generated class for the Tab4Page page.
@@ -43,4 +45,7 @@ export class Tab4Page {
     this.navCtrl.push(LoginPage);
   }
 
+  clickinvite1() {
+    this.navCtrl.push(PillartimeReportListPage);
+  }
 }
